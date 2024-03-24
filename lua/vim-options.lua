@@ -4,6 +4,7 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 
+
 vim.api.nvim_set_keymap('n', '<leader>v', ':vsplit<CR><C-w>l', {noremap = true})
 
 vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR><C-w>j', { noremap = true })
@@ -20,3 +21,8 @@ vim.api.nvim_set_keymap('n', '<C-k>', '<C-w>k', { noremap = true })
 -- Move to the split to the right
 vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { noremap = true })
 
+-- Expand buffer width
+vim.api.nvim_set_keymap('n', '<Leader>k', ':vertical resize +5<CR>', {noremap = true, silent = true})
+
+-- Shorten buffer width
+vim.api.nvim_set_keymap('n', '<Leader>l', ':vertical resize -5<CR>', {noremap = true, silent = true})
