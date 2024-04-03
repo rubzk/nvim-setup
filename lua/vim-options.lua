@@ -4,7 +4,6 @@ vim.cmd("set softtabstop=2")
 vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 
-
 vim.api.nvim_set_keymap('n', '<leader>v', ':vsplit<CR><C-w>l', {noremap = true})
 
 vim.api.nvim_set_keymap('n', '<leader>h', ':split<CR><C-w>j', { noremap = true })
