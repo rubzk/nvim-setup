@@ -29,15 +29,6 @@ return {
 				capabilities = capabilities,
 				cmd = { "gopls" },
 				filetypes = { "go", "gomod", "gowork", "gotmpl" },
-				settings = {
-					gopls = {
-						completedUnimported = true,
-						usePlaceHolders = true,
-						analysis = {
-							unusedParams = true,
-						},
-					},
-				},
 			})
 			vim.keymap.set("n", "gd", vim.lsp.buf.definition, {})
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
