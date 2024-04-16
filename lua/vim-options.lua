@@ -29,3 +29,7 @@ vim.api.nvim_set_keymap("n", "<Leader>l", ":vertical resize -5<CR>", { noremap =
 
 vim.api.nvim_set_keymap("n", "<C-d>", "<C-d>zz", { noremap = true }) -- Vertical movement to be aligned with the middle of the screen
 vim.api.nvim_set_keymap("n", "<C-u>", "<C-u>zz", { noremap = true }) -- Same 
+
+vim.api.nvim_set_keymap("n", "n", "nzzzv", { noremap = true }) -- Same 
+vim.api.nvim_set_keymap("n", "N", "Nzzzv", { noremap = true }) -- Same 
+
