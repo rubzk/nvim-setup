@@ -8,10 +8,16 @@ return {
 	},
 	config = function()
 		require("neo-tree").setup({
-			hide_gitignored = false,
-			hide_dotfiles = false,
-			visible = true,
+			filesystem = {
+				filtered_items = {
+					visible = true,            -- Ensure hidden items are visible in a semi-transparent state
+					show_hidden = true,        -- Show hidden files (including dotfiles)
+					hide_dotfiles = false,     -- Don't hide dotfiles (files starting with .)
+					hide_gitignored = false,   -- Don't hide gitignored files
+				},
+			},
 		})
 		vim.keymap.set("n", "<leader>e", ":Neotree filesystem reveal left<CR>", {})
 	end,
 }
+
